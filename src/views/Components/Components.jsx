@@ -30,6 +30,17 @@ import SectionDownload from "./Sections/SectionDownload.jsx";
 
 import componentsStyle from "assets/jss/material-kit-react/views/components.jsx";
 
+import {
+  BlockIndex,
+  BlockContent,
+  ButtonHero
+} from 'components'
+
+import {
+  Row,
+  Col
+} from 'react-bootstrap'
+
 class Components extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
@@ -52,15 +63,20 @@ class Components extends React.Component {
               <GridItem>
                 <div className={classes.brand}>
                   <h2 className={classes.title}>การร่วมมือกันของเกษตรกร <div>เพื่อลดหมอกควันภาคเหนือ</div></h2>
+                  <ButtonHero
+                    theme_tea
+                    label='ดูสินค้า'
+                    width='30%'
+                    height='50px'
+                  />
                 </div>
               </GridItem>
             </GridContainer>
           </div>
         </Parallax>
-
         <div className={classNames(classes.main, classes.mainRaised)}>
-          <SectionBasics />
-          {/* <SectionNavbars />
+          {/* <SectionBasics />
+          <SectionNavbars />
           <SectionTabs />
           <SectionPills />
           <SectionNotifications />
@@ -78,6 +94,76 @@ class Components extends React.Component {
           </GridItem>
           <SectionExamples />
           <SectionDownload /> */}
+
+          <BlockIndex
+            theme_standard
+          />
+          <BlockContent
+            theme_black
+            title='เกษตรกรที่เข้าร่วม'
+            content={
+              <div>
+                ssaadasd
+              </div>
+            }
+          />
+          <BlockContent
+            theme_cream
+            title='สินค้าที่จัดจำหน่าย'
+            content={
+              <GridContainer>
+                <GridItem md={2}>
+                  <ButtonHero
+                    theme_category
+                    label='ผัก'
+                    height='52px'
+                    width='100%'
+                  />
+                </GridItem>
+                <GridItem md={2}>
+                  <ButtonHero
+                    theme_category
+                    label='ผลไม้'
+                    height='52px'
+                    width='100%'
+                  />
+                </GridItem>
+                <GridItem md={2}>
+                  <ButtonHero
+                    theme_category
+                    label='สมุนไพร'
+                    height='52px'
+                    width='100%'
+                  />
+                </GridItem>
+                <GridItem md={2}>
+                  <ButtonHero
+                    theme_category
+                    label='กาแฟ'
+                    height='52px'
+                    width='100%'
+                  />
+                </GridItem>
+                <GridItem md={2}>
+                  <ButtonHero
+                    theme_category
+                    label='โกโก้'
+                    height='52px'
+                    width='100%'
+                  />
+                </GridItem>
+              </GridContainer>
+            }
+          />
+          <BlockContent
+            theme_white
+            content={
+              <div>
+
+                logo
+              </div>
+            }
+          />
         </div>
         <Footer />
       </div>
