@@ -11,7 +11,7 @@ const headerLinksStyle = theme => ({
     listStyle: "none",
     paddingTop: "0",
     paddingBottom: "0",
-    color: "inherit"
+    color: "#233140"
   },
   listItem: {
     float: "left",
@@ -37,7 +37,7 @@ const headerLinksStyle = theme => ({
     padding: "0 !important"
   },
   navLink: {
-    color: "inherit",
+    color: "#233140",
     position: "relative",
     padding: "0.9375rem",
     fontWeight: "400",
@@ -50,7 +50,8 @@ const headerLinksStyle = theme => ({
     display: "inline-flex",
     "&:hover,&:focus": {
       color: "inherit",
-      background: "rgba(200, 200, 200, 0.2)"
+      background: "rgba(200, 200, 200, 0.2)",
+        BorderBottom: '1px solid whtie'
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 30px)",
@@ -88,7 +89,7 @@ const headerLinksStyle = theme => ({
   },
   navLinkActive: {
     color: "inherit",
-    backgroundColor: "rgba(255, 255, 255, 0.1)"
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
   },
   icons: {
     width: "20px",

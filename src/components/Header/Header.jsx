@@ -73,7 +73,14 @@ class Header extends React.Component {
       [classes.absolute]: absolute,
       [classes.fixed]: fixed
     });
-    const brandComponent = <Button className={classes.title}>{brand}</Button>;
+    const brandComponent =
+      <div>
+        <img src={require("assets/img/logo.png")} />
+
+        <Button className={classes.title}>
+          {brand}
+        </Button>
+      </div>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
@@ -84,8 +91,8 @@ class Header extends React.Component {
                 {leftLinks}
               </Hidden>
             ) : (
-              brandComponent
-            )}
+                brandComponent
+              )}
           </div>
           <Hidden smDown implementation="css">
             {rightLinks}

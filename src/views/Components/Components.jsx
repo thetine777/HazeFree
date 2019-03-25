@@ -36,7 +36,7 @@ class Components extends React.Component {
     return (
       <div>
         <Header
-          brand="Material Kit React"
+          brand="HAZE FREE"
           rightLinks={<HeaderLinks />}
           fixed
           color="transparent"
@@ -46,15 +46,12 @@ class Components extends React.Component {
           }}
           {...rest}
         />
-        <Parallax image={require("assets/img/bg4.jpg")}>
+        <Parallax image={require("assets/img/bg8.png")}>
           <div className={classes.container}>
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  <h1 className={classes.title}>Material Kit React.</h1>
-                  <h3 className={classes.subtitle}>
-                    A Badass Material-UI Kit based on Material Design.
-                  </h3>
+                  <h2 className={classes.title}>การร่วมมือกันของเกษตรกร <div>เพื่อลดหมอกควันภาคเหนือ</div></h2>
                 </div>
               </GridItem>
             </GridContainer>
@@ -63,7 +60,7 @@ class Components extends React.Component {
 
         <div className={classNames(classes.main, classes.mainRaised)}>
           <SectionBasics />
-          <SectionNavbars />
+          {/* <SectionNavbars />
           <SectionTabs />
           <SectionPills />
           <SectionNotifications />
@@ -80,7 +77,7 @@ class Components extends React.Component {
             </Link>
           </GridItem>
           <SectionExamples />
-          <SectionDownload />
+          <SectionDownload /> */}
         </div>
         <Footer />
       </div>
