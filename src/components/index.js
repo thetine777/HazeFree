@@ -2,3 +2,6 @@
 export * from './BlockIndex'
 export * from './BlockContent'
 export * from './ButtonHero'
+export * from './CardCustom'
+export * from './LogoBrand'
+export * from './CardFarmer'

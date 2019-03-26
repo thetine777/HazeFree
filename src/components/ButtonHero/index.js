@@ -10,13 +10,16 @@ export class ButtonHero extends React.Component {
         const {
             theme_tea,
             theme_category,
+            theme_addtocard,
             width,
             height,
             label,
+            image
         } = this.props
         const customClass = cx({
             "theme_tea": theme_tea,
-            'theme_category': theme_category
+            'theme_category': theme_category,
+            'theme_addtocard': theme_addtocard
         })
         return (
             <ButtonHeroStyled
@@ -24,7 +27,10 @@ export class ButtonHero extends React.Component {
                 height={height}
             >
                 <div className={customClass}>
-                    <Button className="button_submit">{label}</Button>
+                    <Button className="button_submit">
+                        <img src={image} />
+                        {label}
+                    </Button>
                 </div>
             </ButtonHeroStyled>
         )

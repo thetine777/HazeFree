@@ -33,12 +33,16 @@ import componentsStyle from "assets/jss/material-kit-react/views/components.jsx"
 import {
   BlockIndex,
   BlockContent,
-  ButtonHero
+  ButtonHero,
+  CardCustom,
+  LogoBrand,
+  CardFarmer
 } from 'components'
 
 import {
   Row,
-  Col
+  Col,
+  Image
 } from 'react-bootstrap'
 
 class Components extends React.Component {
@@ -63,12 +67,19 @@ class Components extends React.Component {
               <GridItem>
                 <div className={classes.brand}>
                   <h2 className={classes.title}>การร่วมมือกันของเกษตรกร <div>เพื่อลดหมอกควันภาคเหนือ</div></h2>
-                  <ButtonHero
-                    theme_tea
-                    label='ดูสินค้า'
-                    width='30%'
-                    height='50px'
-                  />
+                  <GridContainer style={{
+                    display: 'flex',
+                    justifyContent: 'center'
+                  }}>
+                    <GridItem sm={3} md={3} lg={3}>
+                      <ButtonHero
+                        theme_tea
+                        label='ดูสินค้า'
+                        width='100%'
+                        height='50px'
+                      />
+                    </GridItem>
+                  </GridContainer>
                 </div>
               </GridItem>
             </GridContainer>
@@ -94,7 +105,6 @@ class Components extends React.Component {
           </GridItem>
           <SectionExamples />
           <SectionDownload /> */}
-
           <BlockIndex
             theme_standard
           />
@@ -103,7 +113,12 @@ class Components extends React.Component {
             title='เกษตรกรที่เข้าร่วม'
             content={
               <div>
-                ssaadasd
+                <CardFarmer
+                  theme_standard
+                  name='คุณ สมปปปปป'
+                  image={require('assets/img/farmer/01.png')}
+                  job='เกษตรกร'
+                />
               </div>
             }
           />
@@ -111,57 +126,191 @@ class Components extends React.Component {
             theme_cream
             title='สินค้าที่จัดจำหน่าย'
             content={
-              <GridContainer>
-                <GridItem md={2}>
-                  <ButtonHero
-                    theme_category
-                    label='ผัก'
-                    height='52px'
-                    width='100%'
-                  />
-                </GridItem>
-                <GridItem md={2}>
-                  <ButtonHero
-                    theme_category
-                    label='ผลไม้'
-                    height='52px'
-                    width='100%'
-                  />
-                </GridItem>
-                <GridItem md={2}>
-                  <ButtonHero
-                    theme_category
-                    label='สมุนไพร'
-                    height='52px'
-                    width='100%'
-                  />
-                </GridItem>
-                <GridItem md={2}>
-                  <ButtonHero
-                    theme_category
-                    label='กาแฟ'
-                    height='52px'
-                    width='100%'
-                  />
-                </GridItem>
-                <GridItem md={2}>
-                  <ButtonHero
-                    theme_category
-                    label='โกโก้'
-                    height='52px'
-                    width='100%'
-                  />
-                </GridItem>
-              </GridContainer>
+              <div>
+                <GridContainer
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    paddingBottom: '54px',
+                    paddingTop: '20px'
+                  }}>
+                  <GridItem md={2} >
+                    <ButtonHero
+                      theme_category
+                      label='ผัก'
+                      height='52px'
+                      width='100%'
+                    />
+                  </GridItem>
+                  <GridItem md={2} >
+                    <ButtonHero
+                      theme_category
+                      label='ผลไม้'
+                      height='52px'
+                      width='100%'
+                    />
+                  </GridItem>
+                  <GridItem md={2} >
+                    <ButtonHero
+                      theme_category
+                      label='สมุนไพร'
+                      height='52px'
+                      width='100%'
+                    />
+                  </GridItem>
+                  <GridItem md={2} >
+                    <ButtonHero
+                      theme_category
+                      label='กาแฟ'
+                      height='52px'
+                      width='100%'
+                    />
+                  </GridItem>
+                  <GridItem md={2} >
+                    <ButtonHero
+                      theme_category
+                      label='โกโก้'
+                      height='52px'
+                      width='100%'
+                    />
+                  </GridItem>
+                </GridContainer>
+                <GridContainer>
+                  <GridItem md={3}>
+                    <CardCustom
+                      theme_standard
+                      title='มะเขือเทศ'
+                    />
+                  </GridItem>
+                  <GridItem md={3}>
+                    <CardCustom
+                      theme_standard
+                      title='มะเขือเทศ'
+                    />
+                  </GridItem>
+                  <GridItem md={3}>
+                    <CardCustom
+                      theme_standard
+                      title='มะเขือเทศ'
+                    />
+                  </GridItem>
+                  <GridItem md={3}>
+                    <CardCustom
+                      theme_standard
+                      title='มะเขือเทศ'
+                    />
+                  </GridItem>
+                  <GridItem md={3}>
+                    <CardCustom
+                      theme_standard
+                      title='มะเขือเทศ'
+                    />
+                  </GridItem>
+                  <GridItem md={3}>
+                    <CardCustom
+                      theme_standard
+                      title='มะเขือเทศ'
+                    />
+                  </GridItem>
+                  <GridItem md={3}>
+                    <CardCustom
+                      theme_standard
+                      title='มะเขือเทศ'
+                    />
+                  </GridItem>
+                  <GridItem md={3}>
+                    <CardCustom
+                      theme_standard
+                      title='มะเขือเทศ'
+                    />
+                  </GridItem>
+                </GridContainer>
+                <ButtonHero
+                  theme_tea
+                  label='ดูสินค้าเพิ่มเติม'
+                  width='100%'
+                  height='50px'
+                />
+              </div>
             }
           />
           <BlockContent
             theme_white
             content={
-              <div>
-
-                logo
-              </div>
+              <GridContainer>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo001.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo002.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo003.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo004.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo005.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo006.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo007.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo008.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo009.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo010.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo011.png")}
+                  />
+                </GridItem>
+                <GridItem xs={6} sm={4} md={2}>
+                  <LogoBrand
+                    theme_standard
+                    brand={require("assets/img/logo/logo012.png")}
+                  />
+                </GridItem>
+              </GridContainer>
             }
           />
         </div>
